@@ -1,0 +1,100 @@
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  background: #000;
+}
+html{
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  overflow: hidden;
+}
+
+button {
+  display: block;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include rm(480) {
+    width: 480px;
+  }
+
+  @include rm(640) {
+    width: 640px;
+  }
+
+  @include rm(768) {
+    width: 768px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include rm(1024) {
+    width: 1024px;
+  }
+
+  @include rm(1220) {
+    width: 1220px;
+  }
+}
+
+.title {
+  font-family: $title-font;
+  font-size: 28px;
+  color: rgb(32, 32, 32);
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include rm(480) {
+    font-size: 30px;
+  }
+
+  @include rm(640) {
+    font-size: 34px;
+  }
+
+  @include rm(768) {
+    font-size: 38px;
+  }
+
+  @include rm(1024) {
+    font-size: 40px;
+  }
+
+  @include rm(1220) {
+    font-size: 46px;
+  }
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+
+br {
+  line-height: 1;
+  font-size: 0;
+}

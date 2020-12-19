@@ -1,0 +1,23 @@
+extends settings/layout
+
+prepend html
+  - const lang = "ru";
+
+prepend head
+  - const pageTitle = "BARIBAL";
+  - const themeColor = "#000";
+
+append head
+
+append content
+  include components/header
+  include components/main
+  include components/aboutus
+  include components/price
+  include components/masters
+  include components/gallery
+  include components/contacs
+
+append scripts
+  //- script(src="https://179523.selcdn.ru/public/prod-scripts/cis_footer.js")
+  //- script(defer src="https://179523.selcdn.ru/public/delivery-banner/banner.js")

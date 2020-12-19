@@ -1,0 +1,34 @@
+
+  @font-face {
+    font-family: 'Noteworthy';
+    src: url('../fonts/noteworthy-light-webfont.woff2') format("woff2"), url('../fonts/noteworthy-light-webfont.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+  }
+
+  @font-face {
+    font-family: 'Noteworthy';
+    src: url('../fonts/noteworthy-bold-webfont.woff2') format("woff2"), url('../fonts/noteworthy-bold-webfont.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+  }
+
+  /* playfair-display-700 - cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/playfair-display-v21-cyrillic-700.woff2') format('woff2'), url('../fonts/playfair-display-v21-cyrillic-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* pt-sans-regular - cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../fonts/pt-sans-v12-cyrillic-regular.woff2') format('woff2'),  url('../fonts/pt-sans-v12-cyrillic-regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

@@ -1,0 +1,93 @@
+::-ms-clear {
+  display: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#comebacker_main_div {
+  display: none !important;
+  height: 0px !important;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+select:-moz-focusring,
+a:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+*:focus,
+*:visited,
+*:active,
+*:hover {
+  outline: 0 !important;
+}
+
+a,
+a:focus,
+a:visited,
+a:active,
+a:hover {
+  outline: 0 !important;
+}
+
+*::-moz-focus-inner {
+  border: 0;
+  outline: none;
+}
+
+select {
+  outline: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("https://179523.selcdn.ru/public/layout-images/select-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 10px;
+}
+
+select:hover {
+  background-size: 10px 10px;
+  background-position: right 10px center;
+}
+
+select:focus {
+  outline: none !important;
+  outline-color: transparent;
+  outline-width: 0;
+}
+
+select::-ms-expand {
+  display: none !important;
+  background: none !important;
+  position: fixed;
+  border: none !important;
+  outline: none !important;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+select::-moz-focus-inner,
+option::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"]>input[type="button"]::-moz-focus-inner {
+  border: none;
+}
+
+*:not(#fake) {
+  outline: none;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
