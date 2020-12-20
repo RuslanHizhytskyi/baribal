@@ -1,0 +1,152 @@
+.header {
+  position: relative;
+  z-index: 5;
+  font-family: $serif-font;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    // background: #0f0f0f;
+  }
+  &__logo_wrapper {
+    max-width: 240px;
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    &_bear {
+      width: 40px;
+      margin-right: 10px;
+    }
+    &_logo {
+      width: 80px;
+    }
+  }
+  &__burger {
+    position: relative;
+  }
+
+  &__burger_icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: calc(50% - 15px);
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 2px;
+      left: 0;
+      background: #fff;
+      transition: all 0.3s;
+    }
+    &::before {
+      top: calc(50% + 4px);
+    }
+    &::after {
+      top: calc(50% - 4px);
+    }
+  }
+
+  &__burger_wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 0;
+    top: -1000px;
+    right: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &__nav {
+    margin: auto;
+  }
+
+  &__nav_item {
+    &:not(:last-child) {
+      margin-bottom: 34px;
+    }
+    a {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      &:hover,
+      &:focus {
+        color: #f0f0f0;
+        background: #1f1f1f;
+      }
+    }
+  }
+
+  &__phones {
+    margin-bottom: 30px;
+  }
+  &__phone {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+  }
+   
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100px;
+    width: 50%;
+    margin: 0 auto auto;
+  } 
+
+  
+  &__burger_active {
+    .header__burger_icon {
+      position: fixed;
+      top: 20px;
+      right: 10px;
+      z-index: 2;
+      &::before {
+        top: 50%;
+        transform: rotate(45deg);
+        transition: all 0.3s;
+      }
+      &::after {
+        top: 50%;
+        transform: rotate(-45deg);
+        transition: all 0.3s;
+      }
+    }
+    .header__burger_wrapper {
+      position: fixed;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      padding: 10px;
+      background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
+      opacity: 1;
+      transition: all 0.3s;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      & > * {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}

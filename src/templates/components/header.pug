@@ -1,24 +1,29 @@
 .header
-  .header__container
+  .header__container.container
     .header__logo_wrapper
-      img.header__logo_bear(src="", alt="")
-      img.header__logo_logo(src="", alt="")
-    ul.header__nav
-      li.header__nav_item
-        a(href="") о нас
-      li.header__nav_item
-        a(href="") услуги
-      li.header__nav_item
-        a(href="") мастера
-      li.header__nav_item
-        a(href="") портфолио
-      li.header__nav_item
-        a(href="") контакты
-    .header__phone
-      p.header__phone (067)100-12-28
-      p.header__phone (067)100-12-28
-    .header__social
-      a.header__social.header__social_instagram(href="")
-        img(src="", alt="")
-      a.header__social.header__social_facebook(href="")
-        img(src="", alt="")
+      img.header__logo.header__logo_bear(src="img/logo_bear.png", alt="")
+      img.header__logo.header__logo_logo(src="img/logo_name.png", alt="")
+    .header__burger
+      span.header__burger_icon
+      .header__burger_wrapper
+        ul.header__nav
+          li.header__nav_item
+            a(href="#aboutus") о нас
+          li.header__nav_item
+            a(href="#price") услуги
+          li.header__nav_item
+            a(href="#masters") мастера
+          li.header__nav_item
+            a(href="#gallery") портфолио
+          li.header__nav_item
+            a(href="#contacs") контакты
+        .header__phones
+          p.header__phone (067)100-12-28
+          p.header__phone (067)100-12-28
+        .header__social
+          a.header__social.header__social_instagram(href="")
+            svg(viewBox="0 0 155.139 155.139" width='24' height='24')
+              use(xlink:href="#facebook2")
+          a.header__social.header__social_facebook(href="")
+            svg(viewBox="0 0 512 512.00006" width='24' height='24')
+              use(xlink:href="#instagram2")

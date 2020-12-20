@@ -1,0 +1,29 @@
+.aboutus {
+  padding: 25px 0 25px;
+  text-align: center;
+
+  &__img_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__img {
+    display: block;
+    max-width: 280px;
+    margin: 0 auto 20px;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__text {
+    margin-bottom: 40px;
+    font-size: 14px;
+    br {
+      display: none;
+    }
+  }
+  &__btn {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 0 auto;
+  }
+}

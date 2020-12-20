@@ -1,0 +1,16 @@
+.main {
+  position: relative;
+  min-height: 600px;
+  filter: grayscale(40%);
+  background: url(../img/bg_main_mob.jpg) no-repeat center center / cover;
+
+  &__title {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

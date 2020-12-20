@@ -13,6 +13,19 @@ img {
   max-width: 100%;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
 svg {
   overflow: hidden;
 }
@@ -53,31 +66,31 @@ button {
 
 .title {
   font-family: $title-font;
-  font-size: 28px;
-  color: rgb(32, 32, 32);
+  font-size: 20px;
+  color: #fff;
   font-weight: bold;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
 
   @include rm(480) {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   @include rm(640) {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   @include rm(768) {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   @include rm(1024) {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   @include rm(1220) {
-    font-size: 46px;
+    font-size: 40px;
   }
 }
 
@@ -97,4 +110,13 @@ button {
 br {
   line-height: 1;
   font-size: 0;
+}
+
+.btn {
+  font-family: $serif-font;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #bb1d00;
 }

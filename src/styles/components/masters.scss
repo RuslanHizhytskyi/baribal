@@ -1,0 +1,64 @@
+.masters {
+  padding: 25px 0 50px;
+  background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__list {
+    margin: 0 auto;
+  }
+}
+
+.master {
+  max-width: 240px;
+  text-align: center;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__name {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__position {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FF914D;
+  }
+  &__photo_wrapper {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  &__photo {
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  &__link {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: -2px;
+    bottom: -2px;
+    background: #FF914D;
+    
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 6px;
+      left: 15px;
+      top: 27px;
+      background: #fff ;
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  &__text {
+    font-size: 16px;
+  }
+}
