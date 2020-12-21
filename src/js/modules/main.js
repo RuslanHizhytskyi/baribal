@@ -4,7 +4,10 @@ function writeText() {
   const textArr = text.split('');
   function writeChar(i) {
     if (i < textArr.length) {
-      textContainer.textContent += textArr[i];
+      textContainer.innerHTML += textArr[i];
+      if (textArr[i] === '.') {
+        textContainer.innerHTML += '<br>';
+      }
       setTimeout(function() {
         writeChar(++i);
       }, 150);
@@ -16,7 +19,6 @@ function writeText() {
     }
   }
   writeChar(0);
-  console.log(textArr);
 
 }
 

@@ -1,8 +1,24 @@
 .main {
   position: relative;
   min-height: 600px;
-  filter: grayscale(40%);
-  background: url(../img/bg_main_mob.jpg) no-repeat center center / cover;
+  @include rm(480) {
+    min-height: 800px;
+  }
+  @include rm(768) {
+    min-height: 600px;
+  }
+  &__bg_img_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: grayscale(40%);
+    background: url(../img/bg_main_mob.jpg) no-repeat center center / cover;
+    @include rm(640) {
+      background: url(../img/bg_main.jpg) no-repeat left center / cover;
+    }
+  }
 
   &__title {
     position: absolute;
@@ -12,5 +28,11 @@
     font-size: 20px;
     text-align: center;
     text-transform: uppercase;
+    @include rm(480) {
+      top: 600px;
+    }
+    @include rm(768) {
+      top: 400px;
+    }
   }
 }

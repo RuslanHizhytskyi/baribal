@@ -1,4 +1,38 @@
 section.gallery#gallery
-  .container
+  .gallery__container.container
     h2.gallery__title.title портфолио
     .gallery__wrapper
+      .gallery__wrapper_img
+        picture
+          source(media="(max-width: 1023px)", srcset="img/gallery_1_mob.jpg")
+          img.gallery__img(src="img/gallery_1_.jpg", alt="Image")
+      .gallery__wrapper_img
+        picture
+          source(media="(max-width: 1023px)", srcset="img/gallery_2_mob.jpg")
+          img.gallery__img(src="img/gallery_2_.jpg", alt="Image")
+      .gallery__wrapper_img
+        picture
+          source(media="(max-width: 1023px)", srcset="img/gallery_3_mob.jpg")
+          img.gallery__img(src="img/gallery_3_.jpg", alt="Image")
+      .gallery__wrapper_img
+        picture
+          source(media="(max-width: 1023px)", srcset="img/gallery_4_mob.jpg")
+          img.gallery__img(src="img/gallery_4_.jpg", alt="Image")
+      .gallery__wrapper_img
+        picture
+          source(media="(max-width: 1023px)", srcset="img/gallery_5_mob.jpg")
+          img.gallery__img(src="img/gallery_5_.jpg", alt="Image")
+      .gallery__wrapper_img
+        picture
+          source(media="(max-width: 1023px)", srcset="img/gallery_6_mob.jpg")
+          img.gallery__img(src="img/gallery_6_.jpg", alt="Image")
+      .gallery__big_photo.photo
+        span.photo__close
+        img.photo__img(src="", alt="")
+        .photo__arrows_wrapper
+          span.photo__arrow.photo__arrow_prev
+            svg(viewBox="0 0 34 40" width="34" height="40")
+                use(xlink:href="#arrow_prev")
+          span.photo__arrow.photo__arrow_next
+            svg(viewBox="0 0 34 40" width="34" height="40")
+                use(xlink:href="#arrow_next")

@@ -2,24 +2,53 @@
   position: relative;
   z-index: 5;
   font-family: $serif-font;
+  @include rm(1024) {
+    background: #0f0f0f;
+  }
   &__container {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    // background: #0f0f0f;
+    @include rm(480) {
+      padding: 15px;
+    }
+    @include rm(768) {
+      width: 100%;
+    }
+    @include rm(1024) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+    }
   }
   &__logo_wrapper {
     max-width: 240px;
     display: flex;
     align-items: center;
+    @include rm(1024) {
+      max-width: 250px;
+      padding: 5px 0;
+    }
   }
   &__logo {
     &_bear {
       width: 40px;
       margin-right: 10px;
+      @include rm(480) {
+        width: 60px;
+      }
+      @include rm(1024) {
+        width: 30%;
+      }
     }
     &_logo {
       width: 80px;
+      @include rm(480) {
+        width: 120px;
+      }
+      @include rm(1024) {
+        width: 60%;
+      }
     }
   }
   &__burger {
@@ -32,6 +61,13 @@
     height: 30px;
     right: 0;
     top: calc(50% - 15px);
+    
+    @include rm(480) {
+      right: 15px;
+    }
+    @include rm(1024) {
+      display: none;
+    }
     &::before,
     &::after {
       position: absolute;
@@ -56,41 +92,102 @@
     height: 0;
     top: -1000px;
     right: 0;
+    font-size: 16px;
     overflow: hidden;
     opacity: 0;
     transition: all 0.3s;
+    @include rm(480) {
+      font-size: 18px;
+    }
+    @include rm(768) {
+      width: 50vw;
+      height: auto;
+      top: -10000px;
+    }
+    @include rm(1024) {
+      position: relative;
+      width: auto;
+      height: 100%;
+      display: flex;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      font-size: 14px;
+      opacity: 1;
+    }
   }
   &__nav {
     margin: auto;
+    @include rm(1024) {
+      display: flex;
+      margin: 0 15px 0 0;
+    }
   }
 
   &__nav_item {
+    @include rm(1024) {
+      display: flex;
+      align-items: center;
+      &:hover,
+      &:focus {
+        background: #1f1f1f;
+      }
+    }
+    
     &:not(:last-child) {
-      margin-bottom: 34px;
+      margin-bottom: 20px;
+      @include rm(1024) {
+        margin: 0;
+      }
     }
     a {
       display: block;
+      min-width: 200px;
       width: 100%;
+      padding: 7px;
       margin: 0 auto;
       color: #fff;
       text-decoration: none;
       text-align: center;
       text-transform: uppercase;
-      &:hover,
-      &:focus {
-        color: #f0f0f0;
-        background: #1f1f1f;
+      @include rm(480) {
+        min-width: 320px;
+      }
+      @include rm(1024) {
+        min-width: auto;
+        padding: 15px;
+        white-space: nowrap;
       }
     }
   }
 
   &__phones {
     margin-bottom: 30px;
+    @include rm(1024) {
+      margin: auto 15px auto 0;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
   &__phone {
     text-align: center;
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      @include rm(1024) {
+        margin: 0;
+      }
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 5px;
+      @include rm(1024) {
+        padding: 2px 5px;
+        white-space: nowrap;
+      }
     }
 
   }
@@ -102,15 +199,34 @@
     max-width: 100px;
     width: 50%;
     margin: 0 auto auto;
+    @include rm(1024) {
+      margin: 0;
+    }
+    a {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+      @include rm(1024) {
+        padding: 5px;
+      }
+    }
   } 
 
   
   &__burger_active {
     .header__burger_icon {
-      position: fixed;
-      top: 20px;
-      right: 10px;
+      // position: fixed;
+      top: 10px;
+      right: 0px;
       z-index: 2;
+      
+      @include rm(480) {
+        right: 15px;
+        top: 20px;
+      }
+      @include rm(1024) {
+        display: none;
+      }
       &::before {
         top: 50%;
         transform: rotate(45deg);
@@ -134,6 +250,9 @@
       background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
       opacity: 1;
       transition: all 0.3s;
+      @include rm(768) {
+        width: 50vw;
+      }
       &::before {
         position: absolute;
         content: '';

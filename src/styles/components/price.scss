@@ -2,12 +2,32 @@
   min-height: 640px;
   padding: 25px 0;
   background: url(../img/bg_price_mob.jpg) no-repeat center bottom / cover;
+  @include rm(480) {
+    padding: 30px 0;
+  }
+  @include rm(640) {
+    padding: 35px 0;
+  }
+  @include rm(768) {
+    padding: 40px 0;
+  }
+  @include rm(1024) {
+    padding: 50px 0;
+    background: url(../img/bg_price.jpg) no-repeat center bottom / cover;
+  }
 
   &__title {
     margin-bottom: 60px;
   }
   &__list {
-    padding: 0 40px;
+    padding: 0 5px;
+    @include rm(640) {
+      padding: 0 10px;
+    }
+    @include rm(1024) {
+      max-width: 670px;
+      padding: 0;
+    }
   }
   &__item {
     display: flex;
@@ -15,6 +35,13 @@
     justify-content: space-between;
     font-size: 14px;
     text-transform: uppercase;
+    @include rm(640) {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    @include rm(1024) {
+      font-size: 24px;
+    }
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -23,6 +50,9 @@
     max-width: 150px;
     font-weight: 300;
     color: #FF914D;
+    @include rm(640) {
+      max-width: none;
+    }
   }
   &__price {
     font-weight: 700;

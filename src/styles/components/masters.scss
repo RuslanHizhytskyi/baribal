@@ -1,6 +1,18 @@
 .masters {
   padding: 25px 0 50px;
   background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
+  @include rm(480) {
+    padding: 30px 0 60px;
+  }
+  @include rm(640) {
+    right: 35px 0 60px;
+  }
+  @include rm(768) {
+    right: 40px 0 60px;
+  }
+  @include rm(1024) {
+    right: 50px 0 60px;
+  }
 
   &__title {
     margin-bottom: 30px;
@@ -13,7 +25,18 @@
 .master {
   max-width: 240px;
   text-align: center;
+  @include rm(480) {
+    max-width: 360px;
+  }
+  @include rm(768) {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+  }
   &__item {
+    @include rm(768) {
+      width: 48%;
+    }
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -22,16 +45,30 @@
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 700;
+    @include rm(480) {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    @include rm(1024) {
+      font-size: 28px;
+    }
   }
   &__position {
     margin-bottom: 15px;
     font-size: 14px;
     font-weight: 700;
     color: #FF914D;
+    @include rm(480) {
+      font-size: 16px;
+    }
+    @include rm(1024) {
+      font-size: 24px;
+    }
   }
   &__photo_wrapper {
     position: relative;
     margin-bottom: 15px;
+    padding: 2px;
   }
   &__photo {
     filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
@@ -40,8 +77,8 @@
     position: absolute;
     width: 60px;
     height: 60px;
-    right: -2px;
-    bottom: -2px;
+    right: 0px;
+    bottom: 0px;
     background: #FF914D;
     
     &::before,
@@ -60,5 +97,11 @@
   }
   &__text {
     font-size: 16px;
+    @include rm(480) {
+      font-size: 18px;
+    }
+    @include rm(1024) {
+      font-size: 22px;
+    }
   }
 }

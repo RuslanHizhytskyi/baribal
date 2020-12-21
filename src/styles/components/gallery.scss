@@ -1,0 +1,138 @@
+.gallery {
+  position: relative;
+  padding: 25px 0;
+  @include rm(480) {
+    padding: 30px 0;
+  }
+  @include rm(640) {
+    padding: 35px 0;
+  }
+  @include rm(768) {
+    padding: 40px 0;
+  }
+  @include rm(1024) {
+    padding: 50px 0;
+  }
+  &__title {
+    margin-bottom: 35px;
+    @include rm(480) {
+      margin-bottom: 45px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include rm(480) {
+      padding: 0 5px;
+    }
+    @include rm(640) {
+      position: relative;
+      padding: 0;
+    }
+  }
+
+  &__wrapper_img {
+    width: 48%;
+    margin-bottom: 10px;
+    @include rm(480) {
+      margin-bottom: 15px;
+    }
+    @include rm(768) {
+      margin-bottom: 20px;
+    }
+    @include rm(1024) {
+      width: 32%;
+      margin-bottom: 30px;
+    }
+  }
+  
+}
+
+
+.photo {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 0.3s;
+  .photo__img {
+    opacity: 0;
+    transition: all 0.6s;
+  }
+  &_active {
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    opacity: 1;
+    transition: all 0.3s;
+    @include rm(1024) {
+      padding: 0;
+    }
+    .photo__img {
+      opacity: 1;
+      transition: all 0.6s;
+    }
+  }
+  &__img {
+    max-width: calc(100% - 20px);
+    margin-bottom: 30px;
+    @include rm(640) {
+      max-width: 100%;
+    }
+    @include rm(1024) {
+      max-height: calc(100% - 100px);
+      margin: 0 0 auto;
+    }
+  }
+  &__arrows_wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: auto;
+    @include rm(1024) {
+      margin-bottom: 0;
+    }
+  }
+  &__arrow {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+  }
+  &__close {
+    position: relative;
+    display: block;
+    margin: auto 0 20px auto;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    @include rm(1024) {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 3px;
+      right: 0;
+      top: calc(50% - 2px);
+      background: #fff;
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

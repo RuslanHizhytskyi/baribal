@@ -2,11 +2,13 @@
 import scrollSmooth from './helpers/smooth-scroll.js';
 import burger from './modules/header';
 import writeText from './modules/main';
+import gallery from './modules/gallery';
 
 function main() {
   scrollSmooth();
   burger();
   writeText();
+  gallery();
 }
 
 main();
