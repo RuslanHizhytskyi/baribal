@@ -12,6 +12,7 @@
   }
   @include rm(1024) {
     right: 50px 0 60px;
+    background: url(../img/bg_wall.jpg) no-repeat center center / cover;
   }
 
   &__title {
