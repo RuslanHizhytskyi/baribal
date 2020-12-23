@@ -1,4 +1,5 @@
 .masters {
+  position: relative;
   padding: 25px 0 50px;
   background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
   @include rm(480) {
@@ -13,6 +14,19 @@
   @include rm(1024) {
     right: 50px 0 60px;
     background: url(../img/bg_wall.jpg) no-repeat center center / cover;
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  &__container {
+    position: relative;
+    z-index: 2;
   }
 
   &__title {
@@ -37,6 +51,7 @@
   &__item {
     @include rm(768) {
       width: 48%;
+      max-width: 494px;
     }
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -73,6 +88,10 @@
   }
   &__photo {
     filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+    @include rm(1024) {
+      display: block;
+      margin: 0 auto;
+    }
   }
   &__link {
     position: absolute;
@@ -81,6 +100,20 @@
     right: 0px;
     bottom: 0px;
     background: #FF914D;
+    &:hover,
+    &:focus {
+      background: #ff6f15;
+    }
+    &:hover::before,
+    &:focus::before {
+      transform: rotate(360deg);
+      transition: all 0.4s;
+    }
+    &:hover::after,
+    &:focus::after {
+      transform: rotate(450deg);
+      transition: all 0.4s;
+    }
     
     &::before,
     &::after {
@@ -90,7 +123,8 @@
       height: 6px;
       left: 15px;
       top: 27px;
-      background: #fff ;
+      background: #fff;
+      transition: all 0.4s;
     }
     &::after {
       transform: rotate(90deg);

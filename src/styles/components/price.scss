@@ -18,6 +18,12 @@
 
   &__title {
     margin-bottom: 60px;
+    // @include rm(1220) {
+    //   text-align: left;
+    //   &::after {
+    //     left: 0;
+    //   }
+    // }
   }
   &__list {
     padding: 0 5px;
@@ -37,10 +43,10 @@
     text-transform: uppercase;
     @include rm(640) {
       font-size: 18px;
-      font-weight: 400;
+      // font-weight: 400;
     }
     @include rm(1024) {
-      font-size: 24px;
+      font-size: 20px;
     }
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -56,5 +62,8 @@
   }
   &__price {
     font-weight: 700;
+    @include rm(1220) {
+      font-size: 22px;
+    }
   }
 }

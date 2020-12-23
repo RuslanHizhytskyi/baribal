@@ -36,6 +36,7 @@
   .map {
     margin-bottom: 30px;
     @include rm(1024) {
+      width: 65%;
       margin: 0;
     }
   }
@@ -73,6 +74,7 @@
       align-items: center;
       justify-content: center;
       max-width: 520px;
+      width: 30%;
       margin: 0;
     }
   }
@@ -145,9 +147,6 @@
 
 
 .map {
-  @include rm(1024) {
-    width: 65%;
-  }
   &__iframe {
     max-width: 100%;
     width: 100%;

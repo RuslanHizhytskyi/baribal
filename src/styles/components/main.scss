@@ -7,6 +7,9 @@
   @include rm(768) {
     min-height: 600px;
   }
+  @include rm(1220) {
+    min-height: 700px;
+  }
   &__bg_img_wrapper {
     position: absolute;
     width: 100%;
@@ -33,6 +36,20 @@
     }
     @include rm(768) {
       top: 400px;
+    }
+    @include rm(1024) {
+      font-size: 22px;
+      font-weight: 300;
+      white-space: nowrap;
+    }
+    @include rm(1220) {
+      font-size: 26px;
+    }
+
+    br {
+      @include rm(1024) {
+        display: none;
+      }
     }
   }
 }
