@@ -154,7 +154,7 @@
     }
     
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       @include rm(1024) {
         margin: 0;
       }

@@ -1,14 +1,16 @@
 // import './helpers/postDate';
 import scrollSmooth from './helpers/smooth-scroll.js';
 import burger from './modules/header';
-import writeText from './modules/main';
+import mainJS from './modules/main';
 import gallery from './modules/gallery';
+import mapLoad from './modules/contacs';
 
 function main() {
   scrollSmooth();
   burger();
-  writeText();
+  mainJS();
   gallery();
+  mapLoad();
 }
 
 main();
