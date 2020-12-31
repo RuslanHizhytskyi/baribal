@@ -117,6 +117,7 @@
     height: 30px;
     right: 10px;
     top: 10px;
+    cursor: pointer;
     @include rm(1024) {
       position: absolute;
       top: 10px;

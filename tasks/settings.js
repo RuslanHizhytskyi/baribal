@@ -10,7 +10,7 @@ const paths = {
     styles: 'src/styles',
     scripts: 'src/js',
     img: 'src/img/*.+(jpg|jpeg|png|svg|ico|gif|webp)',
-    video: 'src/video/*.mp4',
+    video: 'src/video/*.+(mp4|mov)',
     svg: 'src/img/**/*.svg',
     fonts: 'src/fonts/**/*',
     localization: "src/localization/*.json"
@@ -31,7 +31,7 @@ const paths = {
     styles: 'src/styles/**/*.+(sass|scss)',
     scripts: 'src/js/**/*.js',
     images: 'src/img/**/*.+(jpg|jpeg|png|svg|ico|gif|webp)',
-    video: 'src/video/*.mp4',
+    video: 'src/video/*.+(mp4|mov)',
     svg: 'src/img/**/*.svg',
     font: 'src/fonts/**/*'
   }
