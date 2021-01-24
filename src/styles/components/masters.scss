@@ -38,10 +38,9 @@
 }
 
 .master {
-  max-width: 240px;
   text-align: center;
   @include rm(480) {
-    max-width: 360px;
+    max-width: 400px;
   }
   @include rm(768) {
     // display: flex;
@@ -49,8 +48,9 @@
     max-width: 100%;
   }
   &__item {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    margin-bottom: 40px;
+    @include rm(480) {
+      margin-bottom: 0;
     }
   }
   &__inner_wrapper {
@@ -63,7 +63,8 @@
   &__arrow {
     position: absolute;
     z-index: 5;
-    top: calc(50% - 14px);
+    // top: calc(50% - 14px);
+    bottom: 0;
     width: 24px;
     height: 28px;
     cursor: pointer;
@@ -77,6 +78,7 @@
     @include rm (480) {
       width: 34px;
       height: 40px;
+      bottom: auto;
       top: calc(50% - 20px);
     }
     &_prev {
