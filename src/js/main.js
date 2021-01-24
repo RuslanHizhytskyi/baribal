@@ -4,6 +4,7 @@ import burger from './modules/header';
 import mainJS from './modules/main';
 import gallery from './modules/gallery';
 import mapLoad from './modules/contacs';
+import master from './modules/masters'
 
 
 scrollSmooth();
@@ -13,6 +14,7 @@ mainJS();
 function mainWait() {
   gallery();
   mapLoad();
+  master();
 }
 
 if (document.documentElement.clientWidth < 480) {
