@@ -40,6 +40,7 @@ function gallery() {
   }
   function initPhotoSlider() {
     $('.photo__wrapper').slick({
+      
       arrows: true,
       prevArrow: "<span class='photo__arrow photo__arrow_prev'><svg viewBox='0 0 34 40' width='34' height='40'><use xlink:href='#arrow_prev'></use></svg></span>",
       nextArrow: "<span class='photo__arrow photo__arrow_next'><svg viewBox='0 0 34 40' width='34' height='40'><use xlink:href='#arrow_next'></use></svg></span>",
