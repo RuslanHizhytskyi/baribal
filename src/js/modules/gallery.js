@@ -54,22 +54,22 @@ function gallery() {
   function closeBigSlider() {
     document.querySelector('.photo').classList.remove('photo_active');
   }
-  document.addEventListener('DOMContentLoaded', () => {
-    cloneSlides();
-    initGallerySlider();
-    initPhotoSlider();
 
-    galleryWrapper.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('gallery__img')) {
-        openBigSlider(evt.target.getAttribute('data-index'));
-      }
-    });
 
-    photoContainer.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('photo') || evt.target.classList.contains('photo__close')) {
-        closeBigSlider();
-      }
-    });
+  cloneSlides();
+  initGallerySlider();
+  initPhotoSlider();
+
+  galleryWrapper.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('gallery__img')) {
+      openBigSlider(evt.target.getAttribute('data-index'));
+    }
+  });
+
+  photoContainer.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('photo') || evt.target.classList.contains('photo__close')) {
+      closeBigSlider();
+    }
   });
 
 
