@@ -75,7 +75,7 @@
     height: 30px;
     right: 0;
     top: calc(50% - 15px);
-    
+
     @include rm(480) {
       right: 15px;
     }
@@ -152,7 +152,7 @@
         background: #1f1f1f;
       }
     }
-    
+
     &:not(:last-child) {
       margin-bottom: 15px;
       @include rm(1024) {
@@ -213,7 +213,7 @@
     }
 
   }
-   
+
   &__social {
     display: flex;
     align-items: center;
@@ -232,9 +232,9 @@
         padding: 5px;
       }
     }
-  } 
+  }
 
-  
+
   &__burger_active {
     background: #000;
     .header__burger_icon {
@@ -242,7 +242,7 @@
       top: 10px;
       right: 0px;
       z-index: 2;
-      
+
       @include rm(480) {
         right: 15px;
         top: 20px;
@@ -274,6 +274,9 @@
       overflow: scroll;
       opacity: 1;
       transition: all 0.3s;
+      @include rm(480) {
+        background: url(../img/bg_wall.jpg) no-repeat center center / cover;
+      }
       @include rm(768) {
         width: 50vw;
       }

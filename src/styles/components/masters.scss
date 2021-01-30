@@ -4,6 +4,7 @@
   background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
   @include rm(480) {
     padding: 30px 0 60px;
+    background: url(../img/bg_wall.jpg) no-repeat center center / cover;
   }
   @include rm(640) {
     right: 35px 0 60px;
@@ -22,7 +23,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
   }
   &__container {
     position: relative;
@@ -42,15 +43,24 @@
   @include rm(480) {
     max-width: 400px;
   }
+  @include rm(640) {
+    max-width: 500px;
+    padding: 0 50px;
+  }
   @include rm(768) {
-    // display: flex;
-    // justify-content: space-around;
     max-width: 100%;
+    padding: 0;
+  }
+  @include rm(1200) {
+    padding: 0 50px;
   }
   &__item {
     margin-bottom: 40px;
     @include rm(480) {
       margin-bottom: 0;
+    }
+    @include rm(1200) {
+      padding: 0 10px;
     }
   }
   &__inner_wrapper {
@@ -83,9 +93,15 @@
     }
     &_prev {
       left: 5px;
+      @include rm(1024) {
+        left: 10px;
+      }
     }
     &_next {
       right: 5px;
+      @include rm(1024) {
+        right: 10px;
+      }
     }
 
     svg {
@@ -121,6 +137,9 @@
     position: relative;
     margin-bottom: 15px;
     padding: 2px;
+    @include rm(1024) {
+      padding: 5px;
+    }
   }
   &__photo {
     filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));

@@ -4,6 +4,7 @@
   background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
   @include rm(480) {
     padding: 30px 0;
+    background: url(../img/bg_wall.jpg) no-repeat center center / cover;
   }
   @include rm(640) {
     padding: 35px 0;
@@ -13,7 +14,6 @@
   }
   @include rm(1024) {
     padding: 50px 0;
-    background: url(../img/bg_wall.jpg) no-repeat center center / cover;
   }
   &::before {
     position: absolute;
@@ -60,7 +60,7 @@
   &__wrapper_text {
     padding: 18px;
     font-family: $serif-font;
-    
+
     background: rgba(0, 0, 0, 0.2);
     border: 2px solid #000;
     @include rm(768) {
