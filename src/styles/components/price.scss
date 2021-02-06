@@ -53,10 +53,10 @@
     }
   }
   &__name {
-    max-width: 150px;
+    max-width: 180px;
     font-weight: 300;
     color: #FF914D;
-    @include rm(640) {
+    @include rm(480) {
       max-width: none;
     }
   }

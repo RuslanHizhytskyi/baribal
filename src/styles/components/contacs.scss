@@ -58,7 +58,7 @@
   }
 
   &__wrapper_text {
-    padding: 18px;
+    padding: 10px;
     font-family: $serif-font;
 
     background: rgba(0, 0, 0, 0.2);
@@ -74,7 +74,7 @@
       align-items: center;
       justify-content: center;
       max-width: 520px;
-      width: 30%;
+      width: 32%;
       margin: 0;
     }
   }
@@ -85,7 +85,7 @@
     font-weight: 700;
     letter-spacing: 0.5px;
     @include rm(480) {
-      font-size: 18px;
+      font-size: 17px;
       letter-spacing: 1px;
     }
   }

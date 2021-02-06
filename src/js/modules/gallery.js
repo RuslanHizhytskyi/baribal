@@ -50,7 +50,9 @@ function gallery() {
   function openBigSlider(slideIndex) {
     console.log(slideIndex);
     $('.photo__wrapper').slick('slickGoTo', slideIndex );
-    document.querySelector('.photo').classList.add('photo_active');
+    // setTimeout (() => {
+      document.querySelector('.photo').classList.add('photo_active');
+    // }, 250)
   }
   function closeBigSlider() {
     document.querySelector('.photo').classList.remove('photo_active');
@@ -60,6 +62,7 @@ function gallery() {
   cloneSlides();
   initGallerySlider();
   initPhotoSlider();
+
 
   galleryWrapper.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('gallery__img')) {

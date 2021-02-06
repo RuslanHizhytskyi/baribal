@@ -1,12 +1,12 @@
 mixin review(master)
   .master__item
     .master__inner_wrapper
-      h3.master__name!= master.name
-      p.master__position!= master.position
+      h3.master__name(id= 'masterName' + master.id)!= master.name
+      p.master__position(id= 'masterPosition' + master.id)!= master.position
       .master__photo_wrapper
         img.master__photo(src="img/" + master.img, alt='' + master.name)
         a.master__link(href= master.link target="_blank" title='Записаться к мастеру')
-      p.master__text!= master.description
+      p.master__text(id= 'masterText' + master.id)!= master.description
 -
   const mastersArray = [
     {
@@ -14,28 +14,32 @@ mixin review(master)
       position: 'Арт директор',
       img: 'master_01.jpg',
       link: 'https://n447728.yclients.com/company:424409?o=m1246276',
-      description: 'Лучший путь к успеху — это влюбиться в то, что ты делаешь.'
+      description: 'Лучший путь к успеху — это влюбиться в то, что ты делаешь.',
+      id: '1'
     },
     {
       name: 'Сергей Борщик',
       position: 'Барбер',
       img: 'master_02.jpg',
       link: 'https://n447728.yclients.com/company:424409?o=m1246328',
-      description: 'Всякое дело совершенствуется овладением техники. Всякий навык достигается упражнением.'
+      description: 'Всякое дело совершенствуется овладением техники. Всякий навык достигается упражнением.',
+      id: '2'
     },
     {
       name: 'Александр Шапошников',
       position: 'Барбер',
       img: 'master_03.jpg',
       link: 'https://n447728.yclients.com/company:424409?o=m1276364',
-      description: 'Мастера определяет способность с виду легко делать сложные вещи.'
+      description: 'Мастера определяет способность с виду легко делать сложные вещи.',
+      id: '3'
     },
     {
       name: 'Игорь Науменко',
       position: 'Барбер',
       img: 'master_04.jpg',
       link: 'https://n447728.yclients.com/company:424409?o=m1246346',
-      description: 'Профессионал — тот, кто чувствует работу душой.'
+      description: 'Профессионал — тот, кто чувствует работу душой.',
+      id: '4'
     },
   ]
 
@@ -43,23 +47,7 @@ mixin review(master)
 
 section.masters#masters
   .masters__container.container
-    h2.masters__title.title мастера
+    h2.masters__title.title(id="mastersTitle") мастера
     .masters__list.master
       each master in mastersArray
         +review(master)
-
-    //- ul.masters__list.master
-    //-   li.master__item
-    //-     h3.master__name Сергей Обуховский
-    //-     p.master__position Арт директор
-    //-     .master__photo_wrapper
-    //-       img.master__photo(src="img/master_01.jpg", alt="Сергей Обуховский")
-    //-       a.master__link(href="https://n447728.yclients.com/company:424409?o=m1246276" target="_blank" title='Записаться к мастеру')
-    //-     p.master__text Лучший путь к успеху — это влюбиться в то, что ты делаешь.
-    //-   li.master__item
-    //-     h3.master__name Сергей Борщик
-    //-     p.master__position Барбер
-    //-     .master__photo_wrapper
-    //-       img.master__photo(src="img/master_02.jpg", alt="Сергей Борщик")
-    //-       a.master__link(href="https://n447728.yclients.com/company:424409?o=m1246328" target="_blank" title='Записаться к мастеру')
-    //-     p.master__text Всякое дело совершенствуется овладением техники. Всякий навык достигается упражнением.

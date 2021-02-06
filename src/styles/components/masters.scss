@@ -109,6 +109,9 @@
       max-height: 100%;
     }
   }
+  .slick-disabled {
+    opacity: 0.5;
+  }
   &__name {
     margin-bottom: 10px;
     font-size: 18px;

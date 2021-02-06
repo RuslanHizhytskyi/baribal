@@ -66,7 +66,7 @@ mixin review(gallery)
 
 section.gallery#gallery
   .gallery__container.container
-    h2.gallery__title.title портфолио
+    h2.gallery__title.title(id="galleryTitle") портфолио
     .gallery__wrapper
       each gallery in photosArray
         +review(gallery)

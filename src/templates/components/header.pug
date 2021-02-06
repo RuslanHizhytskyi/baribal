@@ -8,19 +8,19 @@
       .header__burger_wrapper
         ul.header__nav
           li.header__nav_item
-            a(href="#aboutus") о нас
+            a(href="#aboutus" id="headerNav1") о нас
           li.header__nav_item
-            a(href="#price") услуги
+            a(href="#price" id="headerNav2") услуги
           li.header__nav_item
-            a(href="#masters") мастера
+            a(href="#masters" id="headerNav3") мастера
           li.header__nav_item
-            a(href="#gallery") портфолио
+            a(href="#gallery" id="headerNav4") портфолио
           li.header__nav_item
-            a(href="#contacs") контакты
+            a(href="#contacs" id="headerNav5") контакты
         .header__phones
-          p.header__phone 
+          p.header__phone
             a(href="tel:+380671001228") (067)100-12-28
-          p.header__phone 
+          p.header__phone
             a(href="tel:+380661001228") (066)100-12-28
         .header__social
           a.header__social_instagram(href="https://www.instagram.com/baribal_barbershop/?igshid=1dbmyo8drnayu" target="_blank")
@@ -29,3 +29,7 @@
           a.header__social_facebook(href="https://www.facebook.com/baribal.barbershop.3" target="_blank")
             svg(viewBox="0 0 155.139 155.139" width='24' height='24')
               use(xlink:href="#facebook2")
+        .header__language
+          button.header__language_ru.header__language_active(id='ru') RU
+          span &nbsp;/&nbsp;
+          button.header__language_ua(id='ua') UA
