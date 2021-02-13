@@ -1,0 +1,35 @@
+extends settings/layout
+
+prepend html
+  - const lang = "ru";
+  - const classBody = "service";
+  - const serviceName = {ua: "Чоловіча стрижка", ru: "Мужская стрижка"};
+
+prepend head
+  - const pageTitle = "Мужская стрижка";
+  - const themeColor = "#fff";
+
+append head
+
+append content
+  include components/svg.html
+  include components/header
+  include components/btn
+  include components/breadcrumbs
+
+  .service
+    .container.service__container
+      .service__wrapper
+        h1.service__title(data-lang-ua='' data-lang-ru='')
+        .service__wrapper_article
+          img.service__img(src="img/service_9.jpg", alt="Photo")
+          p.service__text_article(data-lang-ua='' data-lang-ru='')
+        h2.service__title_list
+        ul.service__list
+          li.service__item
+        p.service__text(data-lang-ua='' data-lang-ru='')
+
+
+
+  include components/contacs
+  script(src="js/service.js")

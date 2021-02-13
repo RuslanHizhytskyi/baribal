@@ -2,6 +2,8 @@
   position: relative;
   z-index: 5;
   font-family: $serif-font;
+  color: #fff;
+  background-color: #000;
   @include rm(1024) {
     background: #0f0f0f;
   }
@@ -114,11 +116,14 @@
     }
   }
   &__nav {
-    // margin: auto auto 30px;
-    margin: auto;
+    margin: auto auto 10px;
     @include rm(1024) {
       display: flex;
       margin: 0 15px 0 0;
+    }
+
+    .service & {
+      display: none !important;
     }
   }
 
@@ -161,13 +166,16 @@
 
 
   &__phones {
-    margin-bottom: 30px;
+    margin: auto auto 30px;
     @include rm(1024) {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: auto 15px auto 0;
+      .service & {
+        flex-direction: row;
+      }
     }
     a {
       color: #fff;
@@ -189,6 +197,9 @@
       @include rm(1024) {
         padding: 2px 5px;
         white-space: nowrap;
+        .service & {
+          margin-right: 10px;
+        }
       }
     }
 

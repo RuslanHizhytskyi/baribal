@@ -7,8 +7,14 @@ body {
   font-family: $main-font;
   font-size: 16px;
   font-weight: 300;
-  color: #fff;
-  background: #000;
+  &.main {
+    color: #fff;
+    background: #000;
+  }
+  &.service {
+    color: #000;
+    background: #fff;
+  }
 }
 html{
   overflow-x: hidden;

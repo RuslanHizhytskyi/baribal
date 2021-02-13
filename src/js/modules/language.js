@@ -3,7 +3,7 @@ function language() {
     ru: {
       mainBtn: 'З<br>А<br>П<br>И<br>С<br>А<br>Т<br>Ь<br>С<br>Я',
       headerNav1: 'о нас',
-      headerNav2: 'услуги',
+      headerNav2: 'Услуги',
       headerNav3: 'мастера',
       headerNav4: 'портфолио',
       headerNav5: 'контакты',
@@ -87,12 +87,10 @@ function language() {
   let lang;
 
   if (localStorage.getItem('lang') === null) {
-    lang = true;
-    localStorage.setItem('lang', true);
-  } else if (localStorage.getItem('lang') == 'false') {
+    lang = 'ru';
+    localStorage.setItem('lang', lang);
+  } else if (localStorage.getItem('lang') == 'ua') {
     translateToUA();
-  } else if (localStorage.getItem('lang') == 'true') {
-    translateToRU();
   }
 
   function changeLanguage(lang) {
@@ -104,20 +102,20 @@ function language() {
     changeLanguage('ru');
     ruBtn.classList.add('header__language_active');
     uaBtn.classList.remove('header__language_active');
-    lang = true;
+    lang = 'ru';
   }
   function translateToUA() {
     changeLanguage('ua');
     ruBtn.classList.remove('header__language_active');
     uaBtn.classList.add('header__language_active');
-    lang = false;
+    lang = 'ua';
   }
 
   document.querySelector('.header__language').addEventListener('click', (evt) => {
     evt.preventDefault();
-    if (evt.target.classList.contains('header__language_ru') && !lang) {
+    if (evt.target.classList.contains('header__language_ru') && lang !== 'ru') {
       translateToRU()
-    } else if (evt.target.classList.contains('header__language_ua') && lang) {
+    } else if (evt.target.classList.contains('header__language_ua') && lang !== 'ua') {
       translateToUA()
     }
     localStorage.setItem('lang', lang);

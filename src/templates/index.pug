@@ -2,6 +2,7 @@ extends settings/layout
 
 prepend html
   - const lang = "ru";
+  - const classBody = "main";
 
 prepend head
   - const pageTitle = "BARIBAL Барбершоп";
@@ -20,6 +21,6 @@ append content
   include components/gallery
   include components/contacs
 
-append scripts
-  //- script(src="https://179523.selcdn.ru/public/prod-scripts/cis_footer.js")
-  //- script(defer src="https://179523.selcdn.ru/public/delivery-banner/banner.js")
+  script(src="js/jquery.min.js")
+  script(src="js/slick.min.js")
+  script(src="js/main.js")

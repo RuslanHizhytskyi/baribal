@@ -13,10 +13,10 @@ const mqpacker = require("css-mqpacker");
 const postcss = require('gulp-postcss');
 const replace = require( 'gulp-replace');
 
-const renameSettings = {
-  basename: 'style',
-  suffix: '.min'
-};
+// const renameSettings = {
+//   basename: 'style',
+//   suffix: '.min'
+// };
 const processors = [
   autoprefixer({
     cascade: false
@@ -38,7 +38,8 @@ function style() {
     .pipe(postcss(processors))
     .pipe(csso())
     .pipe(condition(dev(), sourcemaps.write()))
-    .pipe(rename(renameSettings))
+    // .pipe(rename('style_' + (new Date().getHours()) + "_" + (new Date().getMinutes()) + ".css"))
+    .pipe(rename('style_' + (new Date().getHours()) + "_" + ".css"))
     .pipe( replace( /^[ \t]*\@charset[ \t]+\"UTF\-8\"[ \t]*;/gmi, '' ) )
     .pipe(dest(paths.build.styles))
     .pipe(browserSync.reload({ stream: true }));
