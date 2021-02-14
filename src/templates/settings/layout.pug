@@ -9,8 +9,8 @@ block html
         meta(name="theme-color" content=themeColor)
         title= pageTitle
         link(rel="icon", href="img/favicon.ico", type="image/x-icon")
-        //- link(rel="stylesheet", href="css/style_" + (new Date().getHours()) + "_" + (new Date().getMinutes()) + ".css")
-        link(rel="stylesheet", href="css/style_" + (new Date().getHours()) + "_" + ".css")
+        link(rel="stylesheet", href="css/style_" + (new Date().getHours()) + "_" + (new Date().getMinutes()) + ".css")
+        //- link(rel="stylesheet", href="css/style_" + (new Date().getHours()) + "_" + ".css")
         block fonts
     body(class!= classBody)
       block content

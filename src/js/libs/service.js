@@ -4,18 +4,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const nodesForTranslate = document.querySelectorAll('[data-lang-ua]');
   const uaBtn = document.getElementById('ua');
   const ruBtn = document.getElementById('ru');
+  const titleNode = document.querySelector('title');
+  const serviceTitle = document.querySelector('.service__title');
+
 
   let lang;
 
   if (localStorage.getItem('lang') === null) {
     lang = 'ru';
     localStorage.setItem('lang', lang);
+    translateToRU();
   } else if (localStorage.getItem('lang') == 'ua') {
     translateToUA();
+  } else if (localStorage.getItem('lang') == 'ru') {
+    translateToRU();
   }
+
 
   function changeLanguage(lang) {
     nodesForTranslate.forEach(el => el.innerHTML = el.getAttribute('data-lang-' + lang));
+    titleNode.innerHTML = serviceTitle.getAttribute('data-lang-' + lang);
   }
 
   function translateToRU() {
@@ -63,10 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }));
 
 
+});
+
+function mainWait() {
   const iframe = document.querySelector('.map__iframe');
   iframe.setAttribute('src', iframe.getAttribute('data-src'));
+}
 
-
-
-});
+if (document.documentElement.clientWidth < 480) {
+  window.addEventListener('scroll',
+    function () {
+      return setTimeout(mainWait, 200);
+    }, {
+      once: true
+    });
+} else {
+  mainWait();
+}
 

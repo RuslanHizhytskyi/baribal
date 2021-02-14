@@ -6,17 +6,25 @@
 
   &__container {
     padding: 0 5px;
+    @include rm(1440) {
+      width: 1440px;
+      padding: 0 70px;
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 10px 0;
-    font-size: 16px;
-    // & > * {
-    //   margin-right: 10px;
-    // }
+    padding: 5px 0;
+    font-size: 11px;
+    @include rm(640) {
+      font-size: 16px;
+    }
+    @include rm(1024) {
+      padding: 10px 0;
+      font-size: 20px;
+    }
   }
 
   &__link {
@@ -24,6 +32,9 @@
     padding: 5px;
     color: #000;
     text-decoration: none;
+    @include rm(1024) {
+      padding: 10px 5px;
+    }
     &:hover,
     &:focus {
       color: #2f2f2f;

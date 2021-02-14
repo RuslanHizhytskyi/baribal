@@ -38,8 +38,8 @@ function style() {
     .pipe(postcss(processors))
     .pipe(csso())
     .pipe(condition(dev(), sourcemaps.write()))
-    // .pipe(rename('style_' + (new Date().getHours()) + "_" + (new Date().getMinutes()) + ".css"))
-    .pipe(rename('style_' + (new Date().getHours()) + "_" + ".css"))
+    .pipe(rename('style_' + (new Date().getHours()) + "_" + (new Date().getMinutes()) + ".css"))
+    // .pipe(rename('style_' + (new Date().getHours()) + "_" + ".css"))
     .pipe( replace( /^[ \t]*\@charset[ \t]+\"UTF\-8\"[ \t]*;/gmi, '' ) )
     .pipe(dest(paths.build.styles))
     .pipe(browserSync.reload({ stream: true }));

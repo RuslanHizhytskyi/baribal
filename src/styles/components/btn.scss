@@ -20,6 +20,10 @@
     &:active {
       border-color: #fff;
       transition: all 0.3s;
+
+      .service & {
+        border-color: #000;
+      }
     }
     &:active {
       background: #0f0f0f;
