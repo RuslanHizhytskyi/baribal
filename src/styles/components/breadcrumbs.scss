@@ -25,6 +25,7 @@
       padding: 10px 0;
       font-size: 20px;
     }
+
   }
 
   &__link {
@@ -40,6 +41,10 @@
       color: #2f2f2f;
       text-decoration: underline;
     }
+  }
+
+  .cert &__service {
+    display: none;
   }
 
   &__arrow {
@@ -65,6 +70,9 @@
     &::after {
       bottom: calc(50% - 3px);
       transform: rotate(-45deg);
+    }
+    .cert &_2 {
+      display: none;
     }
   }
 }

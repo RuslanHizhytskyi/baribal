@@ -1,0 +1,111 @@
+.certificate {
+  padding: 25px 0 25px;
+  text-align: center;
+  font-family: $serif-font;
+  color: #000;
+  background: #ccc url(../img/bg_cartificate_mob.jpg) no-repeat center center / cover;
+  @include rm(480) {
+    padding: 30px 0;
+    background: #ccc url(../img/bg_cartificate.jpg) no-repeat center center / cover;
+  }
+  @include rm(640) {
+    padding: 35px 0;
+  }
+  @include rm(768) {
+    padding: 40px 0;
+  }
+  @include rm(1024) {
+    padding: 50px 0;
+  }
+  &__wrapper {
+    @include rm(1024) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #000;
+    @include rm(1024) {
+      &::after {
+        background: #000;
+      }
+    }
+  }
+
+  &__img {
+    margin: 0 auto 20px;
+    @include rm(1024) {
+      min-width: 400px;
+    }
+    @include rm(1220) {
+      min-width: 500px;
+    }
+  }
+
+  &__wrapper_text {
+    @include rm(1024) {
+      margin-left: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    font-size: 18px;
+    @include rm(640) {
+      font-size: 20px;
+    }
+    @include rm(1024) {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    @include rm(1220) {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    @include rm(640) {
+      font-size: 18px;
+    }
+    @include rm(1024) {
+      margin-bottom: 40px;
+      font-size: 22px;
+    }
+    @include rm(1220) {
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 175px;
+    padding: 6px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    @include rm(480) {
+      font-size: 16px;
+    }
+    @include rm(768) {
+      max-width: 210px;
+      font-size: 22px;
+    }
+    @include rm(1220) {
+      max-width: 240px;
+      padding: 8px;
+      font-size: 24px;
+    }
+
+    &:hover,
+    &:focus {
+      background: rgba(0, 0, 0, 0.6)
+    }
+  }
+}

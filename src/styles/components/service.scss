@@ -94,6 +94,10 @@
     @include rm(1220) {
       min-width: 447px;
       margin-right: 55px;
+      .cert & {
+        min-width: 500px;
+        margin-right: 40px;
+      }
     }
     @include rm(1440) {
       margin-right: 80px;
