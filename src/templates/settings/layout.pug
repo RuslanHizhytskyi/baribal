@@ -3,6 +3,11 @@ block html
   html(lang=lang)
     head
       block head
+        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-186212054-1")
+        script window.dataLayer = window.dataLayer || [];
+          | function gtag(){dataLayer.push(arguments);}
+          | gtag('js', new Date());
+          | gtag('config', 'UA-186212054-1');
         meta(name="google-site-verification" content="xtUhJ_bSaobupimyeHf7k0ehqAFa0LWVAa4ZLVt8T6k")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")

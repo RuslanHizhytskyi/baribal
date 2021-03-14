@@ -32,6 +32,10 @@
     max-width: 240px;
     display: flex;
     align-items: center;
+    cursor: default;
+    .service & {
+      cursor: pointer;
+    }
     @include rm(1024) {
       max-width: 250px;
       padding: 5px 0;
