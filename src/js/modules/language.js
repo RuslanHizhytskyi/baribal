@@ -43,7 +43,8 @@ function language() {
       masterText5: 'Техника выполнения - это один из инструментов в работе мастера.',
       galleryTitle: 'ПОРТФОЛИО',
       contactTitle: 'контакты',
-      contactAdress: 'Проспект Николая Бажана ,1а <br> ЖК “Заречный”'
+      contactAdress: 'Проспект Николая Бажана ,1а <br> ЖК “Заречный”',
+      contactTime: 'Время работы: <br> 10:00 - 21:00'
     },
     ua: {
       mainBtn: 'З<br>А<br>П<br>И<br>С<br>А<br>Т<br>И<br>С<br>Ь',
@@ -88,7 +89,8 @@ function language() {
       masterText5: 'Техніка виконання - це один з інструментів в роботі майстра.',
       galleryTitle: 'Портфоліо',
       contactTitle: 'Контакти',
-      contactAdress: 'Проспект Миколи Бажана ,1а <br> ЖК “Зарічний”'
+      contactAdress: 'Проспект Миколи Бажана ,1а <br> ЖК “Зарічний”',
+      contactTime: 'Графік роботи: <br> 10:00 - 21:00'
     }
   };
   const nodesForTranslate = [];
