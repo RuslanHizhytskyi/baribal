@@ -1,0 +1,168 @@
+.service {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: $serif-font;
+  @include rm(640) {
+    font-size: 20px;
+  }
+  @include rm(1220) {
+    font-size: 24px;
+  }
+  @include rm(1440) {
+    font-size: 26px;
+  }
+
+
+  &__container {
+    @include rm(1440) {
+      width: 1440px;
+      padding: 0 70px;
+    }
+  }
+
+  &__wrapper {
+    padding: 20px 0;
+    @include rm(768) {
+      padding: 30px 0;
+    }
+    @include rm(1024) {
+      padding: 40px 0;
+    }
+    @include rm(1220) {
+      padding: 40px 0 60px;
+    }
+
+    a {
+      font-weight: 700;
+      color: #bb1d00;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: #cc1f01;
+        text-decoration: underline;
+      }
+
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    // font-family: $title-font;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    @include rm(640) {
+      font-size: 32px;
+    }
+    @include rm(1024) {
+      margin-bottom: 30px;
+      font-size: 34px;
+    }
+    @include rm(1220) {
+      font-size: 38px;
+    }
+  }
+
+  &__wrapper_article,
+  &__wrapper_list {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    @include rm(1024) {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom-width: 3px;
+    }
+  }
+
+  &__wrapper_article {
+    @include rm(1024) {
+      display: flex;
+      align-items: flex-start
+    }
+  }
+
+
+  &__img {
+    margin: 0 auto 15px;
+    @include rm(1024) {
+      min-width: 360px;
+      margin: 0 30px 0 0;
+    }
+
+    @include rm(1220) {
+      min-width: 447px;
+      margin-right: 55px;
+      .cert & {
+        min-width: 500px;
+        margin-right: 40px;
+      }
+    }
+    @include rm(1440) {
+      margin-right: 80px;
+    }
+  }
+
+  &__text_article {
+    text-align: center;
+    @include rm(1024) {
+      text-align: left;
+      font-size: 22px;
+    }
+    @include rm(1220) {
+      font-size: 26px;
+    }
+    @include rm(1440) {
+      font-size: 28px;
+    }
+  }
+
+  &__title_list {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    @include rm(640) {
+      font-size: 26px;
+    }
+    @include rm(1024) {
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+  }
+
+  &__list {
+    list-style-type: disc;
+    list-style-position: inside;
+
+    @include rm(480) {
+      margin-left: 20px;
+      list-style-position: outside;
+    }
+    @include rm(1024) {
+      margin-left: 25px;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include rm(1024) {
+      text-align: left;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+
+
+  }
+
+}

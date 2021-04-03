@@ -4,6 +4,7 @@
   background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
   @include rm(480) {
     padding: 30px 0 60px;
+    background: url(../img/bg_wall.jpg) no-repeat center center / cover;
   }
   @include rm(640) {
     right: 35px 0 60px;
@@ -22,7 +23,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
   }
   &__container {
     position: relative;
@@ -38,24 +39,78 @@
 }
 
 .master {
-  max-width: 240px;
   text-align: center;
   @include rm(480) {
-    max-width: 360px;
+    max-width: 400px;
+  }
+  @include rm(640) {
+    max-width: 500px;
+    padding: 0 50px;
   }
   @include rm(768) {
-    display: flex;
-    justify-content: space-around;
     max-width: 100%;
+    padding: 0;
+  }
+  @include rm(1200) {
+    padding: 0 50px;
   }
   &__item {
+    margin-bottom: 40px;
+    @include rm(480) {
+      margin-bottom: 0;
+    }
+    @include rm(1200) {
+      padding: 0 10px;
+    }
+  }
+  &__inner_wrapper {
     @include rm(768) {
-      width: 48%;
+      width: 100%;
       max-width: 494px;
+      margin: 0 auto;
     }
-    &:not(:last-child) {
-      margin-bottom: 30px;
+  }
+  &__arrow {
+    position: absolute;
+    z-index: 5;
+    // top: calc(50% - 14px);
+    bottom: 0;
+    width: 24px;
+    height: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      transition: all 0.3s;
     }
+    @include rm (480) {
+      width: 34px;
+      height: 40px;
+      bottom: auto;
+      top: calc(50% - 20px);
+    }
+    &_prev {
+      left: 5px;
+      @include rm(1024) {
+        left: 10px;
+      }
+    }
+    &_next {
+      right: 5px;
+      @include rm(1024) {
+        right: 10px;
+      }
+    }
+
+    svg {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+  .slick-disabled {
+    opacity: 0.5;
   }
   &__name {
     margin-bottom: 10px;
@@ -85,6 +140,9 @@
     position: relative;
     margin-bottom: 15px;
     padding: 2px;
+    @include rm(1024) {
+      padding: 5px;
+    }
   }
   &__photo {
     filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
@@ -100,6 +158,7 @@
     right: 0px;
     bottom: 0px;
     background: #FF914D;
+    outline: 0 !important;
     &:hover,
     &:focus {
       background: #ff6f15;
@@ -114,7 +173,7 @@
       transform: rotate(450deg);
       transition: all 0.4s;
     }
-    
+
     &::before,
     &::after {
       position: absolute;

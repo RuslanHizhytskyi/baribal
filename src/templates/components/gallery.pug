@@ -1,38 +1,91 @@
+mixin review(gallery)
+  .gallery__wrapper_img
+    picture
+      source(media="(max-width: 479px)", srcset="img/" + gallery.imageName + "_mob.jpg")
+      img.gallery__img(src="img/" + gallery.imageName + ".jpg", alt="Image", data-index!= gallery.index)
+-
+  const photosArray = [
+    {
+      imageName: 'gallery_1',
+      index: 0,
+    },
+    {
+      imageName: 'gallery_2',
+      index: 1,
+    },
+    {
+      imageName: 'gallery_3',
+      index: 2,
+    },
+    {
+      imageName: 'gallery_4',
+      index: 3,
+    },
+    {
+      imageName: 'gallery_5',
+      index: 4,
+    },
+    {
+      imageName: 'gallery_6',
+      index: 5,
+    },
+    {
+      imageName: 'gallery_7',
+      index: 6,
+    },
+    {
+      imageName: 'gallery_8',
+      index: 7,
+    },
+    {
+      imageName: 'gallery_9',
+      index: 8,
+    },
+    {
+      imageName: 'gallery_10',
+      index: 9,
+    },
+    {
+      imageName: 'gallery_11',
+      index: 10,
+    },
+    {
+      imageName: 'gallery_12',
+      index: 11,
+    },
+    {
+      imageName: 'gallery_13',
+      index: 12,
+    },
+    {
+      imageName: 'gallery_14',
+      index: 13,
+    },
+    {
+      imageName: 'gallery_15',
+      index: 14,
+    },
+    {
+      imageName: 'gallery_16',
+      index: 15,
+    },
+    {
+      imageName: 'gallery_17',
+      index: 16,
+    },
+    {
+      imageName: 'gallery_18',
+      index: 17,
+    },
+  ]
+
+
 section.gallery#gallery
   .gallery__container.container
-    h2.gallery__title.title портфолио
+    h2.gallery__title.title(id="galleryTitle") портфолио
     .gallery__wrapper
-      .gallery__wrapper_img
-        picture
-          source(media="(max-width: 1023px)", srcset="img/gallery_1_mob.jpg")
-          img.gallery__img(src="img/gallery_1.jpg", alt="Image")
-      .gallery__wrapper_img
-        picture
-          source(media="(max-width: 1023px)", srcset="img/gallery_2_mob.jpg")
-          img.gallery__img(src="img/gallery_2.jpg", alt="Image")
-      .gallery__wrapper_img
-        picture
-          source(media="(max-width: 1023px)", srcset="img/gallery_3_mob.jpg")
-          img.gallery__img(src="img/gallery_3.jpg", alt="Image")
-      .gallery__wrapper_img
-        picture
-          source(media="(max-width: 1023px)", srcset="img/gallery_4_mob.jpg")
-          img.gallery__img(src="img/gallery_4.jpg", alt="Image")
-      .gallery__wrapper_img
-        picture
-          source(media="(max-width: 1023px)", srcset="img/gallery_5_mob.jpg")
-          img.gallery__img(src="img/gallery_5.jpg", alt="Image")
-      .gallery__wrapper_img
-        picture
-          source(media="(max-width: 1023px)", srcset="img/gallery_6_mob.jpg")
-          img.gallery__img(src="img/gallery_6.jpg", alt="Image")
-      .gallery__big_photo.photo
-        span.photo__close
-        img.photo__img(src="", alt="")
-        .photo__arrows_wrapper
-          span.photo__arrow.photo__arrow_prev
-            svg(viewBox="0 0 34 40" width="34" height="40")
-                use(xlink:href="#arrow_prev")
-          span.photo__arrow.photo__arrow_next
-            svg(viewBox="0 0 34 40" width="34" height="40")
-                use(xlink:href="#arrow_next")
+      each gallery in photosArray
+        +review(gallery)
+
+  .gallery__big_photo.photo
+    span.photo__close

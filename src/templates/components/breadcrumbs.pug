@@ -1,0 +1,12 @@
+mixin name(serviceName)
+  span.breadcrumbs__name(data-lang-ua!= serviceName.ua data-lang-ru!= serviceName.ru)!= serviceName.ru
+
+.breadcrumbs
+  .container.breadcrumbs__container
+    .breadcrumbs__wrapper
+      a.breadcrumbs__link.breadcrumbs__main(href="index.html") BARIBAL
+      span.breadcrumbs__arrow
+      a.breadcrumbs__link.breadcrumbs__service(href="index.html#price" data-lang-ua="Послуги" data-lang-ru="Услуги") Услуги
+      span.breadcrumbs__arrow.breadcrumbs__arrow_2
+      +name(serviceName)
+

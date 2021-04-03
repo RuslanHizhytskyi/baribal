@@ -2,9 +2,10 @@ extends settings/layout
 
 prepend html
   - const lang = "ru";
+  - const classBody = "baribal";
 
 prepend head
-  - const pageTitle = "BARIBAL";
+  - const pageTitle = "BARIBAL Барбершоп";
   - const themeColor = "#000";
 
 append head
@@ -17,9 +18,10 @@ append content
   include components/aboutus
   include components/price
   include components/masters
+  include components/certificate
   include components/gallery
   include components/contacs
 
-append scripts
-  //- script(src="https://179523.selcdn.ru/public/prod-scripts/cis_footer.js")
-  //- script(defer src="https://179523.selcdn.ru/public/delivery-banner/banner.js")
+  script(src="js/jquery.min.js")
+  script(src="js/slick.min.js")
+  script(src="js/main.js")

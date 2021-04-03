@@ -12,8 +12,7 @@ const paths = {
     img: 'src/img/*.+(jpg|jpeg|png|svg|ico|gif|webp)',
     video: 'src/video/*.+(mp4|mov)',
     svg: 'src/img/**/*.svg',
-    fonts: 'src/fonts/**/*',
-    localization: "src/localization/*.json"
+    fonts: 'src/fonts/**/*'
   },
   build: {
     main: 'build',
@@ -22,8 +21,7 @@ const paths = {
     scripts: 'build/js',
     img: 'build/img',
     video: 'build/video',
-    fonts: 'build/fonts',
-    localization: "build/localization"
+    fonts: 'build/fonts'
   },
   watch: {
     build: 'build',

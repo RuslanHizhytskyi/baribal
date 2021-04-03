@@ -13,6 +13,11 @@
   @include rm(1024) {
     padding: 50px 0;
   }
+  &__container {
+    @include rm(768) {
+      position: relative;
+    }
+  }
   &__title {
     margin-bottom: 35px;
     @include rm(480) {
@@ -23,33 +28,89 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    @include rm(480) {
-      padding: 0 5px;
-    }
+    padding-bottom: 30px;
     @include rm(640) {
-      position: relative;
-      padding: 0;
+      padding: 0 50px;
     }
   }
 
   &__wrapper_img {
-    width: 48%;
+    padding: 0 5px;
     margin-bottom: 10px;
-    @include rm(480) {
-      margin-bottom: 15px;
-    }
-    @include rm(768) {
-      margin-bottom: 20px;
-    }
-    @include rm(1024) {
-      width: 32%;
-      margin-bottom: 30px;
-    }
   }
   &__img {
     cursor: pointer;
   }
-  
+  &__arrow {
+    position: absolute;
+    z-index: 5;
+    // top: calc(50% - 14px);
+    bottom: 0;
+    width: 24px;
+    height: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      transition: all 0.3s;
+    }
+    @include rm(640) {
+      width: 34px;
+      height: 40px;
+      bottom: auto;
+      top: calc(50% - 28px);
+    }
+    &_prev {
+      left: 5px;
+      @include rm(1024) {
+        left: 10px;
+      }
+    }
+    &_next {
+      right: 5px;
+      @include rm(1024) {
+        right: 10px;
+      }
+    }
+
+    svg {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+  .slick-dots li button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    @include rm(1024) {
+      top: 3px;
+      left: 3px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .slick-dots li.slick-active button {
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #bb1d00;
+    opacity: 0.8;
+    @include rm(1024) {
+      top: 0px;
+      left: 0px;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 
@@ -60,9 +121,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  padding: 30px 0;
+  background: rgba(0, 0, 0, 0.9);
   opacity: 0;
   transition: all 0.3s;
+  @include rm(1024) {
+    padding: 0;
+  }
   .photo__img {
     opacity: 0;
     transition: all 0.6s;
@@ -72,57 +137,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 0;
     opacity: 1;
     transition: all 0.3s;
-    @include rm(1024) {
-      padding: 0;
+    @include rm(1440) {
+      max-width: 1220px;
+      left: calc(50% - 610px);
     }
     .photo__img {
       opacity: 1;
       transition: all 0.6s;
     }
   }
-  &__img {
-    max-width: calc(100% - 20px);
-    margin-bottom: 30px;
-    @include rm(640) {
-      max-width: 100%;
-    }
-    @include rm(1024) {
-      max-height: calc(100% - 100px);
-      margin: 0 0 auto;
-    }
-  }
-  &__arrows_wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-bottom: auto;
-    @include rm(1024) {
-      margin-bottom: 0;
-    }
-  }
-  &__arrow {
-    display: block;
-    padding: 10px;
-    cursor: pointer;
-  }
   &__close {
     position: relative;
     display: block;
-    margin: auto 0 20px auto;
+    margin: auto 10px auto auto;
     width: 30px;
     height: 30px;
-    right: 10px;
-    top: 10px;
     cursor: pointer;
-    @include rm(1024) {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+
+    @include rm(480) {
+      margin: auto 10px 10px auto;
     }
+    // @include rm(1024) {
+    //   position: absolute;
+    //   top: 10px;
+    //   right: 10px;
+    // }
 
     &::before,
     &::after {
@@ -137,6 +178,73 @@
     }
     &::after {
       transform: rotate(-45deg);
+    }
+  }
+
+  &__wrapper {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 40px;
+    margin-bottom: auto;
+    @include rm(480) {
+      max-width: 800px;
+      padding: 0 50px;
+    }
+  }
+
+  .gallery__img {
+    width: 100%;
+    margin: 0 auto;
+    cursor: default;
+    @include rm(480) {
+      max-width: 450px;
+      width: auto;
+    }
+    @include rm(640) {
+      max-width: 500px;
+    }
+    @include rm(768) {
+      max-width: none;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    z-index: 5;
+    top: calc(50% - 14px);
+    // bottom: 0;
+    width: 24px;
+    height: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      transition: all 0.3s;
+    }
+    @include rm (480) {
+      width: 34px;
+      height: 40px;
+      bottom: auto;
+      top: calc(50% - 20px);
+    }
+    &_prev {
+      left: 5px;
+      @include rm(1024) {
+        left: 10px;
+      }
+    }
+    &_next {
+      right: 5px;
+      @include rm(1024) {
+        right: 10px;
+      }
+    }
+
+    svg {
+      width: 100%;
+      max-height: 100%;
     }
   }
 }

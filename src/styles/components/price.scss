@@ -53,10 +53,20 @@
     }
   }
   &__name {
-    max-width: 150px;
+    max-width: 180px;
     font-weight: 300;
     color: #FF914D;
-    @include rm(640) {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover,
+    &:focus {
+      color: #fc9859;
+      text-decoration: underline;
+      transform: scale(1.03);
+      transition: all 0.3s;
+    }
+    @include rm(480) {
       max-width: none;
     }
   }
