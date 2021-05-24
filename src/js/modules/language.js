@@ -7,6 +7,8 @@ function language() {
       headerNav3: 'мастера',
       headerNav4: 'портфолио',
       headerNav5: 'контакты',
+      headerNav6: 'Блог',
+      headerNav7: 'Магазин',
       // videoText: 'Качество. надежность. профессионализм. результат.',
       aboutUsTitle: 'О НАС',
       aboutUsText: 'Baribal Barbershop - это не просто стильное пространство для настоящих мужчин, а место в котором ценят твою уникальность! Мы не просто удивляем качеством , а вводим это в привычку, так как наша команда - профессионалы с большим опытом.  Наши барберы подберут наиболее подходящий образ для Вас, учитывая все пожелания, добавив в него стиль и уверенность в себе. В Baribal Barbershop используют только дорогую и проффесиональную косметику, которую можно приобрести у нас в заведении.',
@@ -32,12 +34,12 @@ function language() {
       masterName2: 'Сергей Борщик',
       masterPosition2: 'Барбер',
       masterText2: 'Всякое дело совершенствуется овладением техники. Всякий навык достигается упражнением.',
-      masterName3: 'Александр Шапошников',
-      masterPosition3: 'Барбер',
-      masterText3: 'Мастера определяет способность с виду легко делать сложные вещи.',
-      masterName4: 'Игорь Науменко',
-      masterPosition4: 'Барбер',
-      masterText4: 'Профессионал — тот, кто чувствует работу душой.',
+      // masterName3: 'Александр Шапошников',
+      // masterPosition3: 'Барбер',
+      // masterText3: 'Мастера определяет способность с виду легко делать сложные вещи.',
+      // masterName4: 'Игорь Науменко',
+      // masterPosition4: 'Барбер',
+      // masterText4: 'Профессионал — тот, кто чувствует работу душой.',
       masterName5: 'Велислав Кулишов',
       masterPosition5: 'Барбер',
       masterText5: 'Техника выполнения - это один из инструментов в работе мастера.',
@@ -53,6 +55,8 @@ function language() {
       headerNav3: 'Майстри ',
       headerNav4: 'Портфоліо ',
       headerNav5: 'Контакти',
+      headerNav6: 'Блог',
+      headerNav7: 'Магазин',
       // videoText: 'Якість. Надійність. Професіоналізм. Результат.',
       aboutUsTitle: 'Про нас',
       aboutUsText: 'Baribal Barbershop - це не просто стильний простір для справжніх чоловіків, а місце в якому цінують твою унікальність! Ми не просто дивуємо якістю, а вводимо це в звичку, так як наша команда - професіонали з великим досвідом. Наші Барбери підберуть найбільш відповідний образ для Вас, враховуючи всі побажання, додавши в нього стиль і впевненість у собі. У Baribal Barbershop використовують тільки дорогу і професійний косметику, яку можна придбати у нас в закладі.',
@@ -78,12 +82,12 @@ function language() {
       masterName2: 'Сергій Борщик',
       masterPosition2: 'Барбер',
       masterText2: 'Всяка справа вдосконалюється оволодінням техніки. Всякий навик досягається вправою.',
-      masterName3: 'Олександр Шапошников',
-      masterPosition3: 'Барбер',
-      masterText3: 'Майстра визначає на вигляд легко робити складні речі.',
-      masterName4: 'Ігор Науменко',
-      masterPosition4: 'Барбер',
-      masterText4: 'Професіонал той, хто відчуває роботу душею.',
+      // masterName3: 'Олександр Шапошников',
+      // masterPosition3: 'Барбер',
+      // masterText3: 'Майстра визначає на вигляд легко робити складні речі.',
+      // masterName4: 'Ігор Науменко',
+      // masterPosition4: 'Барбер',
+      // masterText4: 'Професіонал той, хто відчуває роботу душею.',
       masterName5: 'Велислав Кулiшов',
       masterPosition5: 'Барбер',
       masterText5: 'Техніка виконання - це один з інструментів в роботі майстра.',
@@ -91,11 +95,60 @@ function language() {
       contactTitle: 'Контакти',
       contactAdress: 'Проспект Миколи Бажана ,1а <br> ЖК “Зарічний”',
       contactTime: 'Графік роботи: <br> 10:00 - 21:00'
+    },
+    en: {
+      mainBtn: 'B<br>O<br>O<br>K',
+      headerNav1: 'ABOUT US ',
+      headerNav2: 'SERVICES ',
+      headerNav3: 'MASTERS ',
+      headerNav4: 'PORTFOLIO ',
+      headerNav5: 'CONTACTS',
+      headerNav6: 'BLOG',
+      headerNav7: 'SHOP',
+      // videoText: 'Якість. Надійність. Професіоналізм. Результат.',
+      aboutUsTitle: 'About us',
+      aboutUsText: 'Baribal Barbershop is not just a stylish space for real men, but a place where your uniqueness is appreciated! We do not just surprise with the quality, but we introduce it into a habit, as our team is professionals with extensive experience. Our barbers will select the most suitable image for you, taking into account all your wishes, adding style and self-confidence to it. Baribal Barbershop uses only expensive and professional cosmetics that can be purchased at our establishment.',
+      aboutUsBtn: 'BOOK',
+      certificateTitle: 'Certificate ',
+      certificateSubtitle: 'Gift certificate for any service in the Baribal barbershop in Kiev',
+      certificateText: 'Do you want to make a present for a real man? <b>Baribal barbershop</b> will help you choose the perfect gift! At <b>Baribal</b>, you have the opportunity to purchase a gift certificate at a barber shop in Kiev for any service. A gift certificate to a barbershop is an excellent gift option for friends, relatives or colleagues for any reason. It is not always possible to guess the desire of a person, but everyone wants to look well-groomed. Therefore, a certificate to the barbeshop will be very useful.',
+      certificateBtn: 'Read more',
+      priceTitle: 'SERVICES',
+      priceName1: 'MEN\'S HAIRCUT',
+      priceName2: 'haircut with a clipper',
+      priceName3: 'CHILDREN\'S HAIRCUT',
+      priceName4: 'BEARD CUT',
+      priceName5: 'BEARD CUT WITH shaving',
+      priceName6: 'COMPLEX',
+      priceName7: 'FATHER + SON',
+      priceName8: 'Hair Styling',
+      priceName9: 'gray camouflage',
+      mastersTitle : 'MASTERS',
+      masterName1: 'Sergey Obukhovsky',
+      masterPosition1: 'Art director',
+      masterText1: 'The best way to success is to fall in love with what you do.',
+      masterName2: 'Ruslan Kholodov',
+      masterPosition2: 'Barber',
+      masterText2: 'Any business is improved by the mastery of technology. Any skill is achieved by exercise.',
+      // masterName3: 'Олександр Шапошников',
+      // masterPosition3: 'Барбер',
+      // masterText3: 'Майстра визначає на вигляд легко робити складні речі.',
+      // masterName4: 'Ігор Науменко',
+      // masterPosition4: 'Барбер',
+      // masterText4: 'Професіонал той, хто відчуває роботу душею.',
+      masterName5: 'Velislav Kulishov',
+      masterPosition5: 'Barber',
+      masterText5: 'Technique of execution is one of the tools in the work of the wizard.',
+      galleryTitle: 'Portfolio',
+      contactTitle: 'Contacts',
+      contactAdress: 'Mykola Bazhan Avenue, 1a <br> RC "Zarechny"',
+      contactTime: 'Working hours: <br> 10:00 - 21:00'
     }
   };
   const nodesForTranslate = [];
   const uaBtn = document.getElementById('ua');
   const ruBtn = document.getElementById('ru');
+  const enBtn = document.getElementById('en');
   const videoText = document.getElementById('videoText');
 
   Object.keys(langs.ru).forEach(el => nodesForTranslate.push(document.getElementById(el)));
@@ -107,6 +160,8 @@ function language() {
     localStorage.setItem('lang', lang);
   } else if (localStorage.getItem('lang') == 'ua') {
     translateToUA();
+  } else if (localStorage.getItem('lang') == 'en') {
+    translateToEN();
   }
 
   function changeLanguage(lang) {
@@ -118,13 +173,22 @@ function language() {
     changeLanguage('ru');
     ruBtn.classList.add('header__language_active');
     uaBtn.classList.remove('header__language_active');
+    enBtn.classList.remove('header__language_active');
     lang = 'ru';
   }
   function translateToUA() {
     changeLanguage('ua');
     ruBtn.classList.remove('header__language_active');
     uaBtn.classList.add('header__language_active');
+    enBtn.classList.remove('header__language_active');
     lang = 'ua';
+  }
+  function translateToEN() {
+    changeLanguage('en');
+    ruBtn.classList.remove('header__language_active');
+    uaBtn.classList.remove('header__language_active');
+    enBtn.classList.add('header__language_active');
+    lang = 'en';
   }
 
   document.querySelector('.header__language').addEventListener('click', (evt) => {
@@ -133,6 +197,8 @@ function language() {
       translateToRU()
     } else if (evt.target.classList.contains('header__language_ua') && lang !== 'ua') {
       translateToUA()
+    } else if (evt.target.classList.contains('header__language_en') && lang !== 'en') {
+      translateToEN()
     }
     localStorage.setItem('lang', lang);
   });
