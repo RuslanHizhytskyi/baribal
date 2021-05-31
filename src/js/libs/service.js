@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let lang;
 
-  if (localStorage.getItem('lang') === null) {
+  if (localStorage.getItem('lang') === null || localStorage.getItem('lang') == 'en') {
     lang = 'ru';
     localStorage.setItem('lang', lang);
     translateToRU();
