@@ -1,37 +1,141 @@
+mixin review(price)
+  li.price__item
+    .price__icon
+      svg(viewBox="0 0 " + price.iconWidth + " " + price.iconHeight, width=price.iconWidth, height=price.iconHeight)
+        use(xlink:href="#price_icon_" + price.id)
+    .price__link_wrapper
+      a.price__name(id='priceName' + price.id, target='_blank' href=price.linkHref) #{price.linkText}
+      a.price__service(id='priceAbout' + price.id, href=price.serviceHref) Об услуге
+    p.price__price(id='price_price' + price.id) #{price.price}
+    p.price__currency ₴
+-
+  const priceArray = [
+    {
+      id: '01',
+      iconWidth: '40',
+      iconHeight: '60',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6579673',
+      linkText: 'мужская стрижка',
+      serviceHref: 'muzhskaya_strizhka.html',
+      price: '400',
+      priceTop: '500',
+    },
+    {
+      id: '02',
+      iconWidth: '43',
+      iconHeight: '60',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6579963',
+      linkText: 'стрижка машинкой',
+      serviceHref: 'strizhka_mashinkoy.html',
+      price: '300',
+      priceTop: '300',
+    },
+    {
+      id: '04',
+      iconWidth: '52',
+      iconHeight: '36',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6579971',
+      linkText: 'стрижка бороды',
+      serviceHref: 'strizhka_borody.html',
+      price: '250',
+      priceTop: '300',
+    },
+    {
+      id: '03',
+      iconWidth: '39',
+      iconHeight: '53',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6579997',
+      linkText: 'детская стрижка',
+      serviceHref: 'detskaya_strizhka.html',
+      price: '300',
+      priceTop: '400',
+    },
+    {
+      id: '06',
+      iconWidth: '35',
+      iconHeight: '54',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6580018',
+      linkText: 'комплекс',
+      serviceHref: 'kompleks.html',
+      price: '650',
+      priceTop: '750',
+    },
+    {
+      id: '07',
+      iconWidth: '60',
+      iconHeight: '60',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6579989',
+      linkText: 'отец + сын',
+      serviceHref: 'otec_syn.html',
+      price: '600',
+      priceTop: '700',
+    },
+    {
+      id: '05',
+      iconWidth: '28',
+      iconHeight: '49',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6580058',
+      linkText: 'Королевское бритье',
+      serviceHref: 'https://baribal.kyiv.ua/blog/ru/korolevskoe-brite/',
+      price: '350',
+      priceTop: '400',
+    },
+    {
+      id: '08',
+      iconWidth: '44',
+      iconHeight: '54',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6579972',
+      linkText: 'укладка',
+      serviceHref: 'ukladka.html',
+      price: '150',
+      priceTop: '150',
+    },
+    {
+      id: '09',
+      iconWidth: '46',
+      iconHeight: '43',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s6580003',
+      linkText: 'Камуфлирование',
+      serviceHref: 'kamuflirovanie_sediny.html',
+      price: '300',
+      priceTop: '300',
+    },
+    {
+      id: '11',
+      iconWidth: '60',
+      iconHeight: '60',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s7961830',
+      linkText: 'Чистка ушей',
+      serviceHref: 'https://baribal.kyiv.ua/blog/ru/chistka-ushej-fitosvechami/',
+      price: '300',
+      priceTop: '300',
+    },
+    {
+      id: '10',
+      iconWidth: '60',
+      iconHeight: '60',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s7389640',
+      linkText: 'Black Mask',
+      serviceHref: 'black_mask.html',
+      price: '300',
+      priceTop: '300',
+    },
+    {
+      id: '12',
+      iconWidth: '56',
+      iconHeight: '48',
+      linkHref: 'https://n447728.yclients.com/company:424409?o=s8031457',
+      linkText: 'Полный комплекс',
+      serviceHref: '',
+      price: '1400',
+      priceTop: '1500',
+    },
+  ]
+
+
 section.price#price
   .price__container.container
     h2.price__title.title(id="priceTitle") Услуги
     ul.price__list
-      li.price__item
-        a.price__name(id="priceName1" href="muzhskaya_strizhka.html") мужская стрижка
-        p.price__price 400
-      li.price__item
-        a.price__name(id="priceName2" href="strizhka_mashinkoy.html") стрижка машинкой
-        p.price__price 300
-      li.price__item
-        a.price__name(id="priceName3" href="detskaya_strizhka.html") детская стрижка
-        p.price__price 300
-      li.price__item
-        a.price__name(id="priceName4" href="strizhka_borody.html") стрижка бороды
-        p.price__price 250
-      li.price__item
-        a.price__name(id="priceName5" href="strizhka_borody_s_ispolzovaniem_opasnoy_britvy.html") стрижка бороды с опасной бритвой
-        p.price__price 300
-      li.price__item
-        a.price__name(id="priceName6" href="kompleks.html") комплекс
-        p.price__price 650
-      li.price__item
-        a.price__name(id="priceName7" href="otec_syn.html") отец + сын
-        p.price__price 600
-      li.price__item
-        a.price__name(id="priceName8" href="ukladka.html") укладка
-        p.price__price 150
-      li.price__item
-        a.price__name(id="priceName9" href="kamuflirovanie_sediny.html") Камуфлирование седины
-        p.price__price 300
-      li.price__item
-        a.price__name(id="priceName10" href="black_mask.html") Black Mask
-        p.price__price 300
-      li.price__item
-        a.price__name(id="priceName11" href="https://baribal.kyiv.ua/blog/ru/chistka-ushej-fitosvechami/") Чистка ушей
-        p.price__price 300
+      each price in priceArray
+        +review(price)

@@ -18,12 +18,6 @@
 
   &__title {
     margin-bottom: 60px;
-    // @include rm(1220) {
-    //   text-align: left;
-    //   &::after {
-    //     left: 0;
-    //   }
-    // }
   }
   &__list {
     padding: 0 5px;
@@ -31,49 +25,136 @@
       padding: 0 10px;
     }
     @include rm(1024) {
-      max-width: 670px;
+      columns: 2;
       padding: 0;
     }
   }
   &__item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-bottom: 30px;
     font-size: 14px;
-    text-transform: uppercase;
+
+    @include rm(480) {
+      font-size: 16px;
+    }
     @include rm(640) {
       font-size: 18px;
       // font-weight: 400;
     }
     @include rm(1024) {
-      font-size: 20px;
+      padding: 0 10px;
+      font-size: 22px;
     }
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    @include rm(1220) {
+      padding: 0 20px;
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+
+    @include rm(640) {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+    }
+    @include rm(1024) {
+      width: 60px;
+      height: 60px;
+      margin-right: 25px;
+    }
+
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__link_wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    @include r(359) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include rm(1024) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: lowercase;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+      &:first-letter {
+        text-transform: uppercase;
+      }
     }
   }
   &__name {
-    max-width: 180px;
+    margin-right: 5px;
     font-weight: 300;
-    color: #FF914D;
-    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
     cursor: pointer;
     transition: all 0.3s;
     &:hover,
+    &:active,
     &:focus {
-      color: #fc9859;
-      text-decoration: underline;
+      //color: #fc9859;
       transform: scale(1.03);
       transition: all 0.3s;
     }
     @include rm(480) {
-      max-width: none;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    @include rm(640) {
+      margin-right: 15px;
+      font-size: 25px;
+    }
+    @include rm(1024) {
+      margin: 0;
+    }
+    @include rm(1220) {
+      font-size: 28px;
     }
   }
+
+  &__service {
+    color: #FF914D;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #ff774d;
+    }
+  }
+
+  &__currency,
   &__price {
     font-weight: 700;
-    @include rm(1220) {
+    @include rm(640) {
       font-size: 22px;
+    }
+    @include rm(1024) {
+      font-size: 24px;
+    }
+    @include rm(1220) {
+      font-size: 30px;
     }
   }
 }
