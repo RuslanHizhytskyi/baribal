@@ -126,7 +126,7 @@ mixin review(price)
       iconHeight: '48',
       linkHref: 'https://n447728.yclients.com/company:424409?o=s8031457',
       linkText: 'Полный комплекс',
-      serviceHref: '',
+      serviceHref: 'https://baribal.kyiv.ua/blog/polnyj-kompleks/',
       price: '1400',
       priceTop: '1500',
     },
@@ -136,6 +136,9 @@ mixin review(price)
 section.price#price
   .price__container.container
     h2.price__title.title(id="priceTitle") Услуги
+    .price__toggle_wrapper
+      button.price__barber.price__barber--normal.active#normalBarber Барбер
+      button.price__barber.price__barber--top#topBarber Топ барбер
     ul.price__list
       each price in priceArray
         +review(price)

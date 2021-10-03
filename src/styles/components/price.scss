@@ -17,7 +17,47 @@
   }
 
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    padding-bottom: 0 !important;
+
+    &:after {
+      content: none !important;
+    }
+  }
+  &__toggle_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button {
+      width: 112px;
+      height: 30px;
+      font-family: $title-font;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: none;
+      background-color: #999999;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transition: all 0.2s;
+
+      @include rm(1024) {
+        width: 170px;
+        height: 45px;
+        font-size: 20px;
+      }
+
+      &:hover {
+        transform: scaleY(1.08);
+        transition: all 0.2s;
+      }
+    }
+
+    .active {
+      background-color: #FF914D;
+      box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.25), inset -3px -3px 4px rgba(0, 0, 0, 0.25);
+    }
   }
   &__list {
     padding: 0 5px;

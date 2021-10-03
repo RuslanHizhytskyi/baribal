@@ -2,7 +2,7 @@
 import scrollSmooth from './helpers/smooth-scroll.js';
 import burger from './modules/header';
 import language from './modules/language';
-// import mainJS from './modules/main';
+import price from './modules/price';
 import gallery from './modules/gallery';
 import mapLoad from './modules/contacs';
 import master from './modules/masters'
@@ -10,7 +10,7 @@ import master from './modules/masters'
 
 scrollSmooth();
 burger();
-// mainJS();
+price();
 language();
 
 function mainWait() {
