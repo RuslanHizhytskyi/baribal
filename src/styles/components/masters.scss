@@ -1,19 +1,19 @@
 .masters {
   position: relative;
-  padding: 25px 0 50px;
+  padding: 35px 0;
   background: url(../img/bg_wall_mob.jpg) no-repeat center center / cover;
   @include rm(480) {
-    padding: 30px 0 60px;
+    padding: 40px 0;
     background: url(../img/bg_wall.jpg) no-repeat center center / cover;
   }
   @include rm(640) {
-    right: 35px 0 60px;
+    padding: 45px 0 ;
   }
   @include rm(768) {
-    right: 40px 0 60px;
+    padding: 50px 0 ;
   }
   @include rm(1024) {
-    right: 50px 0 60px;
+    padding: 60px 0 ;
     background: url(../img/bg_wall.jpg) no-repeat center center / cover;
   }
   &::before {

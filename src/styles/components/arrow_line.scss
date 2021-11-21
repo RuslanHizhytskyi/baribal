@@ -1,0 +1,38 @@
+.arrow_line {
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 30px;
+  }
+
+  &__left {
+    flex-grow: 0;
+    width: 20px;
+    height: 30px;
+    margin-right: 12px;
+    background: url(../img/line_arrow.svg) no-repeat center center / cover;
+  }
+
+  &__right {
+    width: 20px;
+    height: 30px;
+    margin-left: 12px;
+    background: url(../img/line_arrow.svg) no-repeat center center / cover;
+    transform: scaleX(-1);
+  }
+
+  &__middle {
+    flex-grow: 1;
+    width: auto;
+    height: 10px;
+    background: url(../img/line_dots.svg) repeat left center;
+
+
+    @include r(479) {
+      width: 245px;
+      flex-grow: 0;
+    }
+  }
+}

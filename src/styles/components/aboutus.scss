@@ -13,7 +13,7 @@
   @include rm(1024) {
     padding: 50px 0;
   }
-  &__container {
+  &__wrapper {
     @include rm(1024) {
       display: flex;
     }
@@ -42,20 +42,23 @@
   }
   &__img {
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 40px;
+    box-shadow: 10px 10px #FF914D;
     @include rm(1024) {
       margin-bottom: 0;
     }
   }
   &__title {
-    margin-bottom: 40px;
+    margin-top: 60px;
     @include rm(1024) {
-      margin-bottom: auto;
+      margin-bottom: 80px;
     }
   }
   &__text {
+    font-family: $serif-font;
     max-width: 100%;
     margin-bottom: 40px;
+    font-weight: 400;
     font-size: 14px;
     @include rm(480) {
       padding: 0 5px;
@@ -67,10 +70,10 @@
     @include rm(1024) {
       padding: 0;
       margin-bottom: auto;
-      font-size: 16px;
+      font-size: 19px;
     }
     @include rm(1220) {
-      font-size: 18px;
+      font-size: 22px;
     }
     br {
       display: none;
@@ -81,12 +84,47 @@
     padding: 12px 28px;
     margin: 0 auto;
     @include rm(480) {
+      margin-top: 20px;
       font-size: 18px;
       letter-spacing: 1px;
     }
     @include rm(1220) {
+      margin-top: 30px;
       font-size: 20px;
       letter-spacing: 3.5px;
     }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 350px;
+  padding: 10px 15px 25px;
+
+  &__img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+  }
+
+  &__title {
+    font-family: $title-font;
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 16px;
   }
 }

@@ -115,22 +115,22 @@ button {
   @include rm(1024) {
     position: relative;
     font-size: 36px;
-    padding-bottom: 30px;
+    //padding-bottom: 30px;
     margin-bottom: 30px;
-    &::after {
-      position: absolute;
-      content: '';
-      width: 100px;
-      height: 1px;
-      left: calc(50% - 50px);
-      bottom: 0;
-      background: #fff;
-    }
+    //&::after {
+    //  position: absolute;
+    //  content: '';
+    //  width: 100px;
+    //  height: 1px;
+    //  left: calc(50% - 50px);
+    //  bottom: 0;
+    //  background: #fff;
+    //}
   }
 
   @include rm(1220) {
     font-size: 40px;
-    padding-bottom: 40px;
+    //padding-bottom: 40px;
     margin-bottom: 40px;
   }
 }

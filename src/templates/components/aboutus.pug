@@ -1,13 +1,39 @@
 section.aboutus#aboutus
   .aboutus__container.container
-    .aboutus__img_wrapper
-      picture
-        source(media="(max-width: 1023px)", srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
-        img.aboutus__img(src="img/aboutus_img.jpg", alt="Image")
-    .aboutus__text_wrapper
-      h2.aboutus__title.title(id="aboutUsTitle") О нас
-      picture
-        source(media="(max-width: 1023px)", srcset="img/aboutus_img_mob.jpg")
-        img.aboutus__img(src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", alt="Image")
-      p.aboutus__text(id="aboutUsText") Baribal Barbershop - это не просто стильное пространство для настоящих мужчин, а место в котором ценят твою уникальность! Мы не просто удивляем качеством , а вводим это в привычку, так как наша команда - профессионалы с большим опытом.  Наши барберы подберут наиболее подходящий образ для Вас, учитывая все пожелания, добавив в него стиль и уверенность в себе. В Baribal Barbershop используют только дорогую и проффесиональную косметику, которую можно приобрести у нас в заведении.
-      a.aboutus__btn.btn(href="https://n447728.yclients.com/company:424409" target="_blank" id="aboutUsBtn") ЗАПИСАТЬСЯ
+    ul.aboutus__list
+      li.aboutus__item.item
+        .item__img
+          svg(viewBox="0 0 60 60" width='60', height='60')
+            use(xlink:href="#aboutus_icon_1")
+        h3.item__title(id="aboutUsItemTitle1") Угощаем напитками
+        p.item__text(id="aboutUsItemText1") Кофе, чай, сладкая вода, пиво, джин, виски, соки и какао для детей за наш счет.
+      li.aboutus__item.item
+        .item__img
+          svg(viewBox="0 0 60 60" width='60', height='60')
+            use(xlink:href="#aboutus_icon_2")
+        h3.item__title(id="aboutUsItemTitle2") Только качественная косметика
+        p.item__text(id="aboutUsItemText2") Используем только качественную и профессиональную косметику для мужчин.
+      li.aboutus__item.item
+        .item__img
+          svg(viewBox="0 0 60 60" width='60', height='60')
+            use(xlink:href="#aboutus_icon_3")
+        h3.item__title(id="aboutUsItemTitle3") Уютная атмосфера
+        p.item__text(id="aboutUsItemText3") У нас вы можете не только привести себя в порялок, но отдохнуть мыслями, поиграть в приставку, выпить вкусные напитки.
+
+    .arrow_line__inner
+      .arrow_line__left
+      .arrow_line__middle
+      .arrow_line__right
+
+    h2.aboutus__title.title(id="aboutUsTitle") О нас
+    .aboutus__wrapper
+      .aboutus__img_wrapper
+        picture
+          source(media="(max-width: 1023px)", srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
+          img.aboutus__img(src="img/aboutus_img.jpg", alt="Image")
+      .aboutus__text_wrapper
+        picture
+          source(media="(max-width: 1023px)", srcset="img/aboutus_img.jpg")
+          img.aboutus__img(src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", alt="Image")
+        p.aboutus__text(id="aboutUsText") Baribal Barbershop - это не просто стильное пространство для настоящих мужчин, а место в котором ценят твою уникальность! Мы не просто удивляем качеством , а вводим это в привычку, так как наша команда - профессионалы с большим опытом.  Наши барберы подберут наиболее подходящий образ для Вас, учитывая все пожелания, добавив в него стиль и уверенность в себе. В Baribal Barbershop используют только дорогую и проффесиональную косметику, которую можно приобрести у нас в заведении.
+        a.aboutus__btn.btn(href="https://n447728.yclients.com/company:424409" target="_blank" id="aboutUsBtn") ЗАПИСАТЬСЯ
